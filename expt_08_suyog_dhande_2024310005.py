@@ -58,7 +58,7 @@ print(f'Mean Squared Error: {mse}')
 
 
 # Install streamlit if not already installed
-!pip install streamlit
+
 
 # Import necessary libraries
 import streamlit as st
