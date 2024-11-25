@@ -74,7 +74,7 @@ humidity = st.number_input("Humidity (%)")
 # Prediction button
 if st.button("Predict"):
     # Make prediction
-    input_features = np.array([[temperature, humidity, occupancy]]) # Indented this line to be inside the if block
+    input_features = np.array([[temperature, humidity, occupancy]]) 
     prediction = model.predict(input_features)[0]
     st.write(f"Predicted Energy Consumption: {prediction:.2f} kWh")
 
