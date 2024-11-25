@@ -15,14 +15,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
-"""1. Data Collection and Preprocessing
-● Load the dataset using Pandas.
-● Handle missing values.
-● Perform exploratory data analysis (EDA) using Matplotlib or Seaborn.
-● Normalize/scale the data if necessary.
-"""
 
-data = pd.read_csv('/content/drive/MyDrive/FDS/EXPT 8/powerconsumption.csv')
+
+data = pd.read_csv('powerconsumption.csv')
 
 # Check for missing values
 print(data.isnull().sum())
@@ -38,10 +33,7 @@ data[['Temperature', 'Humidity']]=scaler.fit_transform(data[['Temperature', 'Hum
 sns.pairplot(data, diag_kind='kde')
 plt.show()
 
-"""2. Build a Machine Learning Model
-● Split the dataset into training and testing sets.
-● Use a regression algorithm (e.g., Ridge Regression) to predict energy consumption.
-"""
+
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Ridge
@@ -63,9 +55,7 @@ mse = mean_squared_error(y_test, y_pred)
 
 print(f'Mean Squared Error: {mse}')
 
-"""3. Build a Streamlit App
-● Create an interactive app for users to input features and get predictions.
-"""
+
 
 # Install streamlit if not already installed
 !pip install streamlit
@@ -90,9 +80,7 @@ if st.button("Predict"):
 
 
 
-"""4. Deployment
-Save the model as a pickle file:
-"""
+
 
 import joblib
 joblib.dump(model, 'ridge_model.pkl')
