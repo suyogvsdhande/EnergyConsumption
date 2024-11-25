@@ -22,7 +22,7 @@ from sklearn.preprocessing import StandardScaler
 ● Normalize/scale the data if necessary.
 """
 
-data = pd.read_csv('/content/drive/MyDrive/FDS/EXPT 8/powerconsumption.csv')
+data = pd.read_csv('powerconsumption.csv')
 
 # Check for missing values
 print(data.isnull().sum())
@@ -68,7 +68,7 @@ print(f'Mean Squared Error: {mse}')
 """
 
 # Install streamlit if not already installed
-!pip install streamlit
+
 
 # Import necessary libraries
 import streamlit as st
